@@ -1,0 +1,27 @@
+curl https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql \
+-H "Content-Type: application/graphql" \
+-d @- << DATA
+{
+  stop(id: "HSL:1030129") {
+    name
+    lat
+    lon
+    wheelchairBoarding
+  }
+}
+DATA
+
+---------------------
+
+curl https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql \
+-H "Content-Type: application/graphql" \
+-d @- << DATA
+{
+  stop(name: "Tikkurilan asema") {
+    id
+    lat
+    lon
+    wheelchairBoarding
+  }
+}
+DATA

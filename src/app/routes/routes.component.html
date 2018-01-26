@@ -1,0 +1,15 @@
+<h2>
+  Pysäkin nimi
+</h2>
+<form name="stop">
+  <input type="text" placeholder="Tikkurila" (keyup)="stopName($event)">
+</form>
+
+<ul>
+  <li *ngFor="let stop of output">
+    <p> {{stop['name']}}</p>
+<!--    <p>{{stop['lon']}}</p>
+    <p>{{stop['lat']}}</p> -->
+    <p>{{stop['desc']}}</p>
+  </li>
+</ul>
